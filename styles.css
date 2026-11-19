@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+:root{--pink:#e99bb5;--deep:#a95776;--ink:#59444d;--muted:#9a7c87;--paper:#fffaf9;--line:#f2dce3}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:radial-gradient(ellipse at top,#fff 0,#fff4f6 48%,#fcecf1 100%);color:var(--ink);font-family:'DM Sans',sans-serif}
+button{font:inherit}
+.sparkles{text-align:center;padding:24px 12px 0;color:#d58ba4;letter-spacing:8px;font-size:18px}
+.page{width:min(900px,calc(100% - 32px));margin:0 auto;padding:18px 0 32px}
+.hero{text-align:center;padding:26px 16px 34px}
+.eyebrow{font-size:10px;letter-spacing:3px;font-weight:700;color:#c17d96;margin:0 0 12px}
+h1,h2{font-family:'Playfair Display',Georgia,serif;font-weight:600}
+h1{font-size:clamp(42px,8vw,70px);line-height:1.05;margin:0;color:#684b57}
+h1 span{color:#d987a5;font-style:italic}
+.subtitle{max-width:510px;margin:15px auto 18px;color:#927985;font-size:14px;line-height:1.8}
+.date-pill{display:inline-flex;align-items:center;gap:8px;border:1px solid #f0d7e0;background:#fff9fb;border-radius:99px;padding:8px 14px;color:#a46c82;font-size:11px}
+.dot{width:7px;height:7px;border-radius:50%;background:#df91ac}
+.progress-wrap{max-width:370px;margin:27px auto 0;text-align:left}
+.progress-copy{display:flex;justify-content:space-between;font-size:11px;color:#9b7d88;margin-bottom:8px}
+.progress-copy strong{color:#b66f8a}
+.progress-track{height:7px;border-radius:99px;background:#f2dfe6;overflow:hidden}
+.progress-fill{height:100%;width:0;background:linear-gradient(90deg,#e9a9bf,#c97998);border-radius:99px;transition:width .5s ease}
+.calendar-section{background:rgba(255,255,255,.72);border:1px solid #f4e1e7;border-radius:24px;padding:25px;box-shadow:0 14px 40px rgba(169,102,128,.07)}
+.section-heading{display:flex;align-items:end;justify-content:space-between;gap:12px;margin-bottom:20px}
+.section-heading .eyebrow{margin-bottom:6px}
+.section-heading h2{font-size:27px;margin:0;color:#6c4e5a}
+.tiny-note{font-size:10px;color:#b08d9a;padding-bottom:5px}
+.calendar{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+.day-card{position:relative;min-height:112px;border:1px solid #f0dce3;border-radius:16px;background:linear-gradient(145deg,#fff,#fff7f9);color:#a66c83;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;cursor:pointer;transition:transform .18s,box-shadow .18s,border-color .18s;padding:10px}
+.day-card:not(:disabled):hover{transform:translateY(-3px);box-shadow:0 9px 18px #dba9ba35;border-color:#e5afc2}
+.day-card .day-number{font-family:'Playfair Display',serif;font-size:27px;color:#b86f8b}
+.day-card .day-icon{font-size:21px;line-height:1}
+.day-card .day-caption{font-size:10px;color:#a88793}
+.day-card.locked{background:#fbf7f8;color:#c9b7be;border-style:dashed;cursor:not-allowed}
+.day-card.locked .day-number{color:#c9b7be}
+.day-card.today{border:2px solid #df9bb2;background:#fff3f7;box-shadow:0 0 0 4px #f8e6ec}
+.day-card.opened{background:linear-gradient(145deg,#fff7fa,#fcecf2)}
+.hint{text-align:center;color:#aa8b96;font-size:11px;margin:20px 0 0}.hint span{color:#d78ba5;font-size:15px}
+.music-card{display:flex;align-items:center;gap:14px;margin:18px 0 0;padding:16px 18px;border:1px solid #f2dce4;border-radius:18px;background:#fff9fb}
+.music-icon{width:42px;height:42px;display:grid;place-items:center;background:#fbe8ef;color:#c67895;border-radius:14px;font-size:21px}
+.music-text{display:flex;flex-direction:column;gap:4px;flex:1}.music-text strong{font-size:12px;color:#775765}.music-text span{font-size:10px;color:#a58b95}
+.music-button,.read-button{border:0;border-radius:99px;background:#d98eaa;color:white;padding:10px 15px;font-size:11px;font-weight:700;cursor:pointer;box-shadow:0 5px 12px #d98eaa35}
+.music-button:hover,.read-button:hover{background:#c87998}
+footer{text-align:center;padding:26px 0 4px;color:#ad8c98;font-size:11px}footer span{color:#d987a5}
+.modal-backdrop{position:fixed;inset:0;background:rgba(83,53,67,.38);backdrop-filter:blur(5px);display:grid;place-items:center;padding:18px;z-index:5}
+.modal-backdrop[hidden]{display:none}
+.letter-modal{position:relative;width:min(490px,100%);max-height:90vh;overflow:auto;background:linear-gradient(160deg,#fffdfc,#fff5f7);border:1px solid #f1dce3;border-radius:22px;padding:34px 34px 28px;text-align:center;box-shadow:0 25px 80px #57344735;animation:appear .25s ease}
+@keyframes appear{from{opacity:0;transform:translateY(12px) scale(.98)}to{opacity:1;transform:none}}
+.close-button{position:absolute;right:14px;top:10px;border:0;background:transparent;color:#b88a9b;font-size:27px;cursor:pointer}
+.envelope-top{color:#d58ca6;font-size:19px;letter-spacing:5px;margin-bottom:18px}
+.letter-day{font-size:9px;letter-spacing:3px;color:#c07d96;font-weight:700;margin:0 0 8px}
+.letter-modal h2{font-size:29px;color:#6b4b58;margin:0}
+.letter-divider{color:#d58ca6;margin:14px 0;font-size:18px}
+.letter-message{white-space:pre-line;text-align:left;color:#765e68;font-size:14px;line-height:1.9;margin:0}
+.letter-signature{text-align:right;color:#a17e8c;font-family:'Playfair Display',serif;font-size:14px;line-height:1.6;margin:20px 0}
+.letter-signature span{color:#c77896;font-style:italic;font-size:17px}
+.read-button{margin-top:5px;padding:12px 20px}
+.toast{position:fixed;left:50%;bottom:22px;transform:translate(-50%,20px);opacity:0;pointer-events:none;background:#704f5d;color:#fff;padding:11px 17px;border-radius:99px;font-size:11px;transition:.25s;z-index:10;white-space:nowrap}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:560px){.page{width:min(100% - 22px,500px);padding-top:8px}.hero{padding:20px 8px 26px}.calendar-section{padding:18px 13px;border-radius:19px}.calendar{grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}.day-card{min-height:96px;border-radius:13px}.day-card .day-number{font-size:24px}.section-heading h2{font-size:23px}.tiny-note{display:none}.music-card{padding:13px;gap:10px}.music-text span{line-height:1.5}.music-button{padding:9px 11px}.letter-modal{padding:30px 23px 24px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}

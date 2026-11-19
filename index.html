@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff1f5">
+  <meta name="description" content="Treinta días, treinta cartitas y un montón de cariño.">
+  <title>30 días contigo ♡</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="sparkles" aria-hidden="true">✦　♡　✧　♡　✦</div>
+  <main class="page">
+    <header class="hero">
+      <div class="eyebrow">UN DETALLITO PARA TI</div>
+      <h1>30 días <span>contigo</span></h1>
+      <p class="subtitle">Treinta cartitas, una por día. Porque hay cosas bonitas que merecen decirse despacito.</p>
+      <div class="date-pill"><span class="dot"></span><span id="date-label">Desde el 19 de noviembre</span></div>
+      <div class="progress-wrap">
+        <div class="progress-copy"><span>Cartitas que te quedan por leer</span><strong id="progress-label">30 por leer</strong></div>
+        <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+      </div>
+    </header>
+
+    <section class="calendar-section" aria-labelledby="calendar-title">
+      <div class="section-heading">
+        <div><p class="eyebrow">TU PEQUEÑO CALENDARIO</p><h2 id="calendar-title">Abre una sorpresa ♡</h2></div>
+        <span class="tiny-note">Cada día tiene la suya</span>
+      </div>
+      <div class="calendar" id="calendar" aria-live="polite"></div>
+      <p class="hint"><span>♡</span> Las cartitas se desbloquean día a día. Puedes volver a leer las que ya abriste.</p>
+    </section>
+
+    <section class="music-card">
+      <div class="music-icon">♫</div>
+      <div class="music-text"><strong>Una melodía para acompañarte</strong><span>Si quieres, puedes poner nuestra canción mientras lees.</span></div>
+      <button class="music-button" id="music-button" type="button">▶ Escuchar</button>
+      <audio id="background-music" loop preload="none">
+        <source src="assets/cancion.mp3" type="audio/mpeg">
+      </audio>
+    </section>
+
+    <footer>Hecho con cariño, pensando en ti <span>♡</span></footer>
+  </main>
+
+  <div class="modal-backdrop" id="letter-modal" hidden>
+    <article class="letter-modal" role="dialog" aria-modal="true" aria-labelledby="letter-title">
+      <button class="close-button" id="close-modal" aria-label="Cerrar">×</button>
+      <div class="envelope-top">✧　♡　✧</div>
+      <p class="letter-day" id="letter-day">CARTITA 01</p>
+      <h2 id="letter-title">Para ti, con cariño</h2>
+      <div class="letter-divider">♡</div>
+      <p class="letter-message" id="letter-message"></p>
+      <p class="letter-signature">Con mucho cariño,<br><span>tu Ovillito ♡</span></p>
+      <button class="read-button" id="done-button" type="button">Guardar este momentito</button>
+    </article>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
